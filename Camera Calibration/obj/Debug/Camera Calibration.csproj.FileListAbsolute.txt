@@ -1,0 +1,26 @@
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Camera Calibration.exe.config
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\obj\Debug\Camera Calibration.csprojResolveAssemblyReference.cache
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\cudart64_42_9.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\cvextern.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\npp64_42_9.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_calib3d240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_core240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_features2d240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_flann240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_highgui240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_imgproc240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_legacy240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_ml240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_objdetect240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\opencv_video240.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Camera Calibration.exe
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Camera Calibration.pdb
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Emgu.CV.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Emgu.Util.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\ZedGraph.dll
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Emgu.CV.xml
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\bin\Debug\Emgu.Util.xml
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\obj\Debug\Camera Calibration.exe
+C:\Users\Deo\Documents\Visual Studio 2012\Projects\OpenCV1\Camera Calibration\obj\Debug\Camera Calibration.pdb

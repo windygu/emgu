@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+ <html dir="ltr">
+          <head>
+          <title>2013_Lezione 41</title>
+  <meta charset="windows-1252">
+<style type="text/css" media="screen, projection">body{font-family: arial, verdana, helvetica, sans-serif;font-size: 12px;}</style>
+<link rel="stylesheet" href="/videolezioni/elearning-default.css" type="text/css" media="screen" />
+<style type="text/css">
+          .tooltip {
+              background-color:#000;
+              border:1px solid #fff;
+              padding:10px 15px;
+              display:none;
+              color:#fff;
+              text-align:left;
+              -moz-box-shadow:0 0 10px #000;
+              -webkit-box-shadow:0 0 10px #000;
+          }
+          .tooltip .label {
+              color:#48A1C7;
+              width:35px;
+          }
+          .tooltip .value {
+              color:#fff;
+              font-size:11px;
+              font-weight:bold;
+          }
+          #content, #right {
+              margin-top:10px;
+          }
+          #content2, #right {
+              margin-top:10px;
+          }
+          #content {
+              background:url("http://video.polito.it/img/content_top640.jpg") no-repeat scroll 0 0 #ffffff;
+              float:left;
+              min-height:250px;
+              padding:20px;
+              padding-left:40px;
+              width:620px;
+          }
+          #content2 {
+              background:url("http://video.polito.it/img/content_top640.jpg") no-repeat scroll 0 0 #ffffff;
+             /* float:left;*/
+              min-height:200px;
+              padding:20px;
+              padding-left:40px;
+              width:620px;
+          }
+          #content2_reverse {
+              background:url("http://video.polito.it/img/content_top640_reverse.jpg") no-repeat scroll 0 0 #ffffff;
+             /* float:left;*/
+              min-height:200px;
+              padding:20px;
+              padding-left:40px;
+              width:620px;
+          }
+
+          body, p, div, a, table {
+              font-family:"Lucida Grande","Lucida Sans Unicode","bitstream vera sans","trebuchet ms",verdana,sans-serif;
+              font-size:12px;
+          }
+          ul, ol, p, table {
+              margin:10px 0;
+          }
+          h2  {
+              font-size:22px;
+          }
+          h1, h2, h3, h4 {
+              color:#444444;
+              font-weight:normal;
+              margin:10px 0 -5px;
+          }
+          #content ul li, #right .smaller li {
+              list-style-image:url("http://video.polito.it/img/bullet.png");
+          }
+          #content li, #content li, #right .smaller li {
+              margin-top:7px;
+          }
+          a {
+              color:#295C72;
+          }
+          #lessonList {
+              background:url("http://video.polito.it/img/content_top240.jpg") no-repeat scroll 0 0 #ffffff;
+              float:left;
+              min-height:400px;
+              margin: 10px 10px 0 10px;
+              padding: 10px 10px 0 10px;
+              width:240px;
+          }
+          #div_link_top a {
+            display: block;
+            width: auto;
+            height: 135px;
+          }
+          a.politable {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 11px;
+            font-weight:bold;
+            text-decoration: none;
+            color: #575757;
+            line-height: 110%
+          }
+          a.politable:hover {
+            color: #0084c9;
+            text-decoration: underline;
+          }
+
+          .tipArgs {
+              background-color:#fff;
+              border:1px solid #000;
+              padding:10px 15px;
+              display:none;
+              color:#000;
+              text-align:left;
+              -moz-box-shadow:0 0 10px #000;
+              -webkit-box-shadow:0 0 10px #000;
+          }
+          .tipArgs .label {
+              color:#48A1C7;
+              width:35px;
+          }
+          .tipArgs .value {
+              color:#fff;
+              font-size:11px;
+              font-weight:bold;
+          }
+          a.argoLink {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 11px;
+            font-weight:bold;
+            text-decoration: none;
+            color: #0084c9;
+            line-height: 110%
+          }
+          a.argoLink:hover {
+            color: #575757;
+            text-decoration: underline;
+          }
+         </style>
+<script src="http://video.polito.it/js/jquery.tools.min.js" type="text/javascript"></script>
+<script src="http://video.polito.it/videojs/video.js" type="text/javascript" charset="utf-8"></script>
+            <link rel="stylesheet" href="http://video.polito.it/videojs/video-js.css" type="text/css" media="screen" title="Video JS">
+<script type="text/javascript">
+              // Add VideoJS to all video tags on the page when the DOM is ready
+              VideoJS.setupAllWhenReady();
+            </script>
+<script type="text/javascript">
+          function html5_seek (secondi){
+            var video = document.getElementsByTagName("video")[0];
+            video.pause();
+            video.currentTime = secondi;
+            video.play();
+          }
+          function flow_seek(secondi) {
+            if ($f("aflowplayer").isPlaying()) $f("aflowplayer").pause();
+            $f("aflowplayer").seek(secondi);
+            $f("aflowplayer").play();
+          }
+          function video_seek(secondi){
+            var video = document.getElementsByTagName("video")[0];
+            if (video.style.display=='none') {
+              flow_seek(secondi);
+            } else {
+              html5_seek(secondi);
+            }
+          }
+         </script>
+</head>
+        <body>
+<table style="border-collapse: collapse; height: 160px; width: 100%; border: 0;">
+<tr>
+<td style=" background: url('/image/b_sx.jpg'); width: 7px;" ></td>
+<td style="background: url('/videolezioni/centro.jpg'); width: 922px;" ><div id="div_link_top">
+<a href="http://didattica.polito.it">&nbsp;</a>
+</div></td>
+<td style=" background: url('/image/px_dx.jpg') repeat-x;"></td>
+<td style=" background: url('/image/b_dx.jpg'); width: 6px;"></td>
+</tr>
+<tr>
+<td style="background-color:#e7e7e7; height: 20px;" colspan="2" >
+&nbsp;&nbsp;<a class="politable" href="/pls/portal30/portal30.home">Portale della Didattica</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="politable" href="/pls/portal30/portal30_sso.logout_portale">Logout</a>
+</td>
+<td colspan="2" style=" background-color:#e7e7e7;height: 20px;" >&nbsp;
+</td>
+</tr>
+</table>
+<div id="mainDiv" style="float:left;width:100%;height:100%;">
+<div id="leftZone" style="float:left;width:280px;height:100%;">
+<div id="lessonList"><h3>
+<a href="javascript: espandi();"><img id="imgEspandi" src="/img/ramo_espanso.gif" alt="visualizza argomenti" /></a>
+Lezioni on-line</h3><ul>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1633">2013_Lezione 01</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;01/10/2012</span></li>
+<li id="argEspansi1" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1633&#38;seek=0">Introduzione al corso</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1657">2013_Lezione 02</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;01/10/2012</span></li>
+<li id="argEspansi2" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1657&#38;seek=0">Oscilloscopio digitale, generalita'</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1647">2013_Lezione 03</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;02/10/2012</span></li>
+<li id="argEspansi3" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1647&#38;seek=0">Oscilloscopio digitale</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1647&#38;seek=0">Teorema del campionamento</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1647&#38;seek=0">Oscilloscopio multicanale</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1663">2013_Lezione 04</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;03/10/2012</span></li>
+<li id="argEspansi4" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1663&#38;seek=0">Oscilloscopio digitale</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1663&#38;seek=0">Triggering, specifiche</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1663&#38;seek=0">Introduzione alle sonde compensate</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1714">2013_Lezione 05</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;05/10/2012</span></li>
+<li id="argEspansi5" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1714&#38;seek=0">Sonde compensate</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1714&#38;seek=0">Illustrazione esercitazione su oscilloscopio digitale</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1767">2013_Lezione 06</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;08/10/2012</span></li>
+<li id="argEspansi6" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1767&#38;seek=0">Generalita'</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1767&#38;seek=0">Procedimento empirico sperimentale</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1765">2013_Lezione 07</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;08/10/2012</span></li>
+<li id="argEspansi7" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1765&#38;seek=0">Generalita'</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1765&#38;seek=0">Modelli di incertezza</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1822">2013_Lezione 08</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;09/10/2012</span></li>
+<li id="argEspansi8" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1822&#38;seek=0">Generalita'</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1822&#38;seek=0">Modello deterministico e probabilistico dell'incertezza</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1870">2013_Lezione 09</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;10/10/2012</span></li>
+<li id="argEspansi9" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1870&#38;seek=0">Generalita'</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1870&#38;seek=0">Misurazioni dirette</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1911">2013_Lezione 10</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;12/10/2012</span></li>
+<li id="argEspansi10" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1911&#38;seek=0">Generalita'</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1911&#38;seek=0">Misurazioni indirette</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1927">2013_Lezione 11</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;15/10/2012</span></li>
+<li id="argEspansi11" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1927&#38;seek=0">Circuiti digitali: caratteristiche statiche</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1925">2013_Lezione 12</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;15/10/2012</span></li>
+<li id="argEspansi12" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1925&#38;seek=0">Circuiti digitali: caratteristiche dinamiche</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1925&#38;seek=0">Famiglie logiche</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1933">2013_Lezione 13</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;16/10/2012</span></li>
+<li id="argEspansi13" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1933&#38;seek=0">Circuiti sequenziali: SR, Latch, FF-D</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1933&#38;seek=0">Comportamento dinamico</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1936">2013_Lezione 14</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;17/10/2012</span></li>
+<li id="argEspansi14" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1936&#38;seek=0">Registri, shift register, contatori asincroni e sincroni </a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1936&#38;seek=0">FSM</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1959">2013_Lezione 15</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;19/10/2012</span></li>
+<li id="argEspansi15" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1959&#38;seek=0">Esercizio: filtro con cella di Sallen Key</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1959&#38;seek=0">Celle kRC </a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1964">2013_Lezione 16 (Esercitazione)</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;22/10/2012</span></li>
+<li id="argEspansi16" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1964&#38;seek=0">Esercitazione sui sistemi digitali</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1968">2013_Lezione 17</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;22/10/2012</span></li>
+<li id="argEspansi17" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1968&#38;seek=0">Comparatori di soglia</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1968&#38;seek=0">Monostabili</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1969">2013_Lezione 18</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;23/10/2012</span></li>
+<li id="argEspansi18" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1969&#38;seek=0">Generatori di onda quadra e triangolare</a><br />
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1969&#38;seek=0">Generatori al quarzo</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=1977">2013_Lezione 19 (Esercitazione)</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;24/10/2012</span></li>
+<li id="argEspansi19" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=1977&#38;seek=0">Esercizi: generatore d'onda quadra, generatore d'onda triangolare</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2008">2013_Lezione 20</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;29/10/2012</span></li>
+<li id="argEspansi20" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2008&#38;seek=0">Interconnessioni</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2005">2013_Lezione 21</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;29/10/2012</span></li>
+<li id="argEspansi21" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2005&#38;seek=0">Modelli a linea di trasmissione</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2013">2013_Lezione 22</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;30/10/2012</span></li>
+<li id="argEspansi22" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2013&#38;seek=0">Modelli linea di trasmissione (parte 2)</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2021">2013_Lezione 23</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;31/10/2012</span></li>
+<li id="argEspansi23" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2021&#38;seek=0">Pilotaggio di linee</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2023">2013_Lezione 24 (Esercitazione)</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;02/11/2012</span></li>
+<li id="argEspansi24" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2023&#38;seek=0">Domande e chiarimenti</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2031">2013_Lezione 25</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;05/11/2012</span></li>
+<li id="argEspansi25" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2031&#38;seek=0">Cicli di trasferimento base</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2034">2013_Lezione 26 (Esercitazione)</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;05/11/2012</span></li>
+<li id="argEspansi26" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2034&#38;seek=0">Esercizi: segnali su linee di trasmissione</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2039">2013_Lezione 27</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;06/11/2012</span></li>
+<li id="argEspansi27" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2039&#38;seek=0">Protocolli di bus</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2049">2013_Lezione 28</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;07/11/2012</span></li>
+<li id="argEspansi28" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2049&#38;seek=0">Collegamenti seriali (parte 1)</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2064">2013_Lezione 29</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;09/11/2012</span></li>
+<li id="argEspansi29" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2064&#38;seek=0">Collegamenti seriali (parte 2)</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2073">2013_Lezione 30</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;12/11/2012</span></li>
+<li id="argEspansi30" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2073&#38;seek=0">Integrita' di segnale</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2075">2013_Lezione 31</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;12/11/2012</span></li>
+<li id="argEspansi31" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2075&#38;seek=0">Sistemi di conversione A/D/A</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2078">2013_Lezione 32</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;13/11/2012</span></li>
+<li id="argEspansi32" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2078&#38;seek=0">Convertitori D/A</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2082">2013_Lezione 33</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;14/11/2012</span></li>
+<li id="argEspansi33" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2082&#38;seek=0">Convertitori A/D</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2107">2013_Lezione 34</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;19/11/2012</span></li>
+<li id="argEspansi34" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2107&#38;seek=0">Convertitori A/D (parte 2)</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2106">2013_Lezione 35</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;19/11/2012</span></li>
+<li id="argEspansi35" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2106&#38;seek=0">Sistemi di conversione</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2116">2013_Lezione 36</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;20/11/2012</span></li>
+<li id="argEspansi36" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2116&#38;seek=0">Modulo Sample/Hold</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2123">2013_Lezione 37</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;21/11/2012</span></li>
+<li id="argEspansi37" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2123&#38;seek=0">Circuiti SC</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2136">2013_Lezione 38 (Esercitazione)</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;23/11/2012</span></li>
+<li id="argEspansi38" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2136&#38;seek=0">Esercizi: conversione A/D e D/A</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2151">2013_Lezione 39</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;26/11/2012</span></li>
+<li id="argEspansi39" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2151&#38;seek=0">Circuiti di potenza</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2152">2013_Lezione 40</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;26/11/2012</span></li>
+<li id="argEspansi40" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2152&#38;seek=0">Pilotaggio interuttori BJT e MOS</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2155">2013_Lezione 41</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;27/11/2012</span></li>
+<li id="argEspansi41" style="display:block;">
+-&nbsp;<a class="argoLink" href="javascript:video_seek(0);">Sistemi di alimentazione</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2160">2013_Lezione 42</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;28/11/2012</span></li>
+<li id="argEspansi42" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2160&#38;seek=0">Regolatori di tensione</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2182">2013_Lezione 43 (Esercitazione)</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;30/11/2012</span></li>
+<li id="argEspansi43" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2182&#38;seek=0">Esercizi A/D e alimentatore</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2187">2013_Lezione 44</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;03/12/2012</span></li>
+<li id="argEspansi44" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2187&#38;seek=0">Regolatori di tensione (parte 2)</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2185">2013_Lezione 45</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;03/12/2012</span></li>
+<li id="argEspansi45" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2185&#38;seek=0">Esercizi sui sistemi di alimentazione</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2190">2013_Lezione 46</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;04/12/2012</span></li>
+<li id="argEspansi46" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2190&#38;seek=0">Regolatori a commutazione</a><br />
+</li>
+<li><a href="/pls/portal30/sviluppo.videolezioni.vis?cor=49&amp;lez=2197">2013_Lezione 47</a><br />&nbsp;&nbsp;<span style="font-size:10px;">del&nbsp;05/12/2012</span></li>
+<li id="argEspansi47" style="display:block;">
+-&nbsp;<a class="argoLink" href="sviluppo.videolezioni.vis?cor=49&#38;lez=2197&#38;seek=0">Misura di resistenza di resistore: ohmetro e voltamperometrica</a><br />
+</li>
+</ul></div>
+</div>
+<div id="rightZone" style="height:100%;margin-left:286px;">
+<h2>Elettronica applicata e misure</h2>
+<h3>Prof. Dante DEL CORSO</h3>
+<p>&nbsp;</p>
+<h2>2013_Lezione 41</h2>
+<p>&nbsp;</p>
+<!-- Begin VideoJS -->
+          <div class="video-js-box">
+          <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
+<video class="video-js" width="640" height="480" controls preload poster="http://video.polito.it/dl/534330896D700242D32A1886862FFFE5/50C708F1/2013/2013_THMOAX1_0059710/20121127/Elettronica_applicata_e_misure_lez_41.jpg">
+<source src="http://video.polito.it/dl/EF2B66FECA8E064D628179E0E38D7BE9/50C708F1/2013/2013_THMOAX1_0059710/20121127/Elettronica_applicata_e_misure_lez_41.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+ <!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. --> 
+<div class="vjs-flash-fallback" style="border-style: none; height: 480px; width: 640px; overflow: hidden; background-color: rgb(220, 220, 220);">
+<script src="http://video.polito.it/flowplayer/flowplayer-latest.min.js" type="text/javascript"></script>
+<script src="http://video.polito.it/flowplayer/flowplayer.embed-latest.min.js" type="text/javascript"></script>
+<a id="aflowplayer" style="display:block;width:640px;height:480px;" href="http://video.polito.it/dl/EF2B66FECA8E064D628179E0E38D7BE9/50C708F1/2013/2013_THMOAX1_0059710/20121127/Elettronica_applicata_e_misure_lez_41.mp4">
+            Javascript and Flash Player needed to see this video<span style="display: none;" id="n1272458860377S">&nbsp;</span>
+           </a>
+<script type="text/javascript">
+            document.getElementById("aflowplayer").innerHTML="";
+            $f("aflowplayer", "http://video.polito.it/flowplayer/flowplayer.commercial-latest.swf",{'clip':{'autoPlay':false,'autoBuffering':false,'provider':'lighttpd'},'key':'#$2391daeed0cba24346d','contextMenu':['Politecnico di Torino','Servizi per la Didattica'],'playlist':[{'url':'http://video.polito.it/dl/534330896D700242D32A1886862FFFE5/50C708F1/2013/2013_THMOAX1_0059710/20121127/Elettronica_applicata_e_misure_lez_41.jpg','autoPlay':true,'scaling':'fit'},{'url':'http://video.polito.it/dl/EF2B66FECA8E064D628179E0E38D7BE9/50C708F1/2013/2013_THMOAX1_0059710/20121127/Elettronica_applicata_e_misure_lez_41.mp4'}],'plugins':{'lighttpd':{'url':'flowplayer.pseudostreaming-latest.swf'},'controls':{'url':'flowplayer.controls-latest.swf','autoHide':'always','fullscreen':true,'scrubber':true,'time':true,'backgroundColor':'','tooltips':{'buttons':'true'}}}});
+            //endflowplayer
+           </script>
+</div>
+</video>
+            </div>
+            <!-- End VideoJS -->
+<button id="btnPlay" onclick="playForTag();">PLAY</button>
+<button id="btnTag" onclick="tag();" disabled="disabled" >BOOKMARK!</button>
+<div id="tooltip_play" class="tooltip">
+         PLAY: avvia il video e abilita il pulsante "BOOKMARK!", che consente di memorizzare in una tabella dei bookmark personalizzati
+         </div>
+
+         <div id="tooltip_tag" class="tooltip">
+         BOOKMARK!: crea un bookmark nel momento in cui viene cliccato. Nella tabella sottostante bisogna inserire una o più parole chiave
+         <br />relative al bookmark e poi cliccare sul pulsante SALVA.
+         </div>
+
+         <div id="titolo_tags">Clicca per vedere l'elenco dei bookmark memorizzati</div>
+         <div id="aggiunta">
+
+         <form id="tabtags" name="tabtags" action="sviluppo.videolezioni.save_bookmarks" method="post">
+<table id="tabella" style="width:620px;">
+<thead style="text-align:left;">
+<tr><th colspan="6" style="text-align:right">
+</th></tr>
+<tr><th></th><th>n° riga</th><th>Offset</th><th>Tags</th><th>Autore</th><th>Azioni</th></tr>
+<tr style="text-align:center"><th colspan="6">Nessun bookmark memorizzato</th></tr>
+</table>
+<input type="hidden" id="id_cor" name="cor" value="49" />
+         <input type="hidden" id="id_lez" name="lez" value="2155" />
+         </form>
+        </div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table><tr><td>
+<div id="content"><h2>Download</h2><p>offline version (click con tasto dx sul file e salva con nome...)</p><ul>
+<li><a id=video10766 href="/pls/portal30/sviluppo.videolezioni.download?fid=10766">Video</a></li>
+<li><a id=video10769 href="/pls/portal30/sviluppo.videolezioni.download?fid=10769">iPhone</a></li>
+<li><a id=video10768 href="/pls/portal30/sviluppo.videolezioni.download?fid=10768">iPod</a></li>
+<li><a id=video10767 href="/pls/portal30/sviluppo.videolezioni.download?fid=10767">Mobile</a></li>
+<li><a id=video10770 href="/pls/portal30/sviluppo.videolezioni.download?fid=10770">Audio</a></li>
+</ul>
+</div>
+<div id="tooltip10766" class="tooltip">
+<table style="margin:0">
+<tr><td class="label">File</td><td class="value">Elettronica_applicata_e_misure_lez_41.mp4</td></tr>
+<tr><td class="label">Date</td><td class="value">2012-11-27</td></tr>
+<tr><td class="label">Size</td><td class="value">217.182 Mibyte</td></tr>
+<tr><td class="label">Codec</td><td class="value">mp4 (H264/AAC)</td></tr>
+<tr><td class="label">Bitrate</td><td class="value">354.594 kbit/s</td></tr>
+<tr><td class="label">Duration</td><td class="value">01:25:37</td></tr>
+<tr><td class="label">Resolution</td><td class="value">1024x768@25</td></tr>
+</table>
+</div>
+<div id="tooltip10769" class="tooltip">
+<table style="margin:0">
+<tr><td class="label">File</td><td class="value">Elettronica_applicata_e_misure_lez_41_slide_iphone.mp4</td></tr>
+<tr><td class="label">Date</td><td class="value">2012-11-27</td></tr>
+<tr><td class="label">Size</td><td class="value">133.128 Mibyte</td></tr>
+<tr><td class="label">Codec</td><td class="value">mp4 (H264/AAC)</td></tr>
+<tr><td class="label">Bitrate</td><td class="value">217.359 kbit/s</td></tr>
+<tr><td class="label">Duration</td><td class="value">01:25:37</td></tr>
+<tr><td class="label">Resolution</td><td class="value">640x480@15</td></tr>
+</table>
+</div>
+<div id="tooltip10768" class="tooltip">
+<table style="margin:0">
+<tr><td class="label">File</td><td class="value">Elettronica_applicata_e_misure_lez_41_slide_ipod.mp4</td></tr>
+<tr><td class="label">Date</td><td class="value">2012-11-27</td></tr>
+<tr><td class="label">Size</td><td class="value">57.015 Mibyte</td></tr>
+<tr><td class="label">Codec</td><td class="value">mp4 (H264/AAC)</td></tr>
+<tr><td class="label">Bitrate</td><td class="value">93.089 kbit/s</td></tr>
+<tr><td class="label">Duration</td><td class="value">01:25:37</td></tr>
+<tr><td class="label">Resolution</td><td class="value">320x240@15</td></tr>
+</table>
+</div>
+<div id="tooltip10767" class="tooltip">
+<table style="margin:0">
+<tr><td class="label">File</td><td class="value">Elettronica_applicata_e_misure_lez_41_slide.3gp</td></tr>
+<tr><td class="label">Date</td><td class="value">2012-11-27</td></tr>
+<tr><td class="label">Size</td><td class="value">38.864 Mibyte</td></tr>
+<tr><td class="label">Codec</td><td class="value">3gp (H263/AMRNB)</td></tr>
+<tr><td class="label">Bitrate</td><td class="value">63.451 kbit/s</td></tr>
+<tr><td class="label">Duration</td><td class="value">01:25:38</td></tr>
+<tr><td class="label">Resolution</td><td class="value">352x288@5</td></tr>
+</table>
+</div>
+<div id="tooltip10770" class="tooltip">
+<table style="margin:0">
+<tr><td class="label">File</td><td class="value">Elettronica_applicata_e_misure_lez_41_audio.mp3</td></tr>
+<tr><td class="label">Date</td><td class="value">2012-11-27</td></tr>
+<tr><td class="label">Size</td><td class="value">39.199 Mibyte</td></tr>
+<tr><td class="label">Codec</td><td class="value">mp3 (MP3)</td></tr>
+<tr><td class="label">Bitrate</td><td class="value">64.000 kbit/s</td></tr>
+<tr><td class="label">Duration</td><td class="value">01:25:37</td></tr>
+</table>
+</div>
+<script type="text/javascript">
+$("#video10766").tooltip({tip: '#tooltip10766', position: 'center right', offset: [0,40] });
+$("#video10769").tooltip({tip: '#tooltip10769', position: 'center right', offset: [0,40] });
+$("#video10768").tooltip({tip: '#tooltip10768', position: 'center right', offset: [0,40] });
+$("#video10767").tooltip({tip: '#tooltip10767', position: 'center right', offset: [0,40] });
+$("#video10770").tooltip({tip: '#tooltip10770', position: 'center right', offset: [0,40] });
+
+        function espandi() {
+          for (i=1;i<=47;i++) {
+            divID = "argEspansi" + i;
+            if (document.getElementById(divID).style.display == "none") {
+              document.getElementById(divID).style.display = "block";
+            } else {
+              document.getElementById(divID).style.display = "none";
+            }
+          }
+          if (document.getElementById("imgEspandi").src == "https://didattica.polito.it/img/ramo_espandi.gif") {
+            document.getElementById("imgEspandi").src = "/img/ramo_espanso.gif";
+          } else {
+            document.getElementById("imgEspandi").src = "/img/ramo_espandi.gif";
+          }
+        }
+
+  
+</script>
+</td></tr><tr><td>
+<div id="content2_reverse"><h2></h2>
+I contenuti del presente sito sono soggetti al diritto d'autore. Tutti i diritti su di essi sono<br>
+            espressamente riservati. I contenuti medesimi possono essere utilizzati solo per lo studio e la<br>
+            consultazione da parte dei singoli studenti del Politecnico di Torino, con espressa esclusione<br>
+            di ogni tipo di commercializzazione, modifica, pubblicazione in rete o altro utilizzo non<br>
+            autorizzato per iscritto. Ogni abuso verrà punito ai sensi di legge. 
+</div>
+</td></tr></table>
+</div>
+</div>
+<script src="/jquery/jquery.tools.min.js" type="text/javascript" ></script>
+<script>
+  $(document).ready(function() {
+      // mostra i tooltip sotto i due pulsanti
+      $("#btnPlay").tooltip({tip: '#tooltip_play', position: 'center right', offset: [60,-50] });
+      $("#btnTag").tooltip({tip: '#tooltip_tag', position: 'center right', offset: [60,-100] });
+
+
+      // formatta la scritta che mostra e nasconde la tabella con i segnalibri
+      $("#titolo_tags").css("cursor","pointer");
+      $("#titolo_tags").css('color','#4171B5');
+      $("#titolo_tags").hover(function() {$(this).css('color','#A8A7A7');},function(){$(this).css('color','#4171B5');} );
+
+      // nasconde la tabella con i segnalibri quando si apre la pagina
+      $("#aggiunta").toggle('fast');
+      // gestione dell'evento click sulla scritta che mostra e nasconde la tabella con i segnalibri
+      $("#titolo_tags").click(function(){
+          $("#aggiunta").toggle('fast');
+      });
+  });
+  // funzione per il filtro sulla tabella
+  function filtro (elem, _id, cellNr){
+      var autore = elem.options[elem.selectedIndex].value;
+      var table = document.getElementById("tabella");
+
+      for (var r = 1; r < table.rows.length; r++){
+          ele = table.rows[r].cells[cellNr].innerHTML.replace(/<[^>]+>/g,"");
+          if (ele.indexOf(autore)>=0 )
+              table.rows[r].style.display = '';
+          else table.rows[r].style.display = 'none';
+      }
+      // fix per non togliere il th
+      table.rows[1].style.display = '';
+  }
+  // forza la disabilitazione del pulsante "BOOKMARK" al caricamento della pagina
+  document.getElementById("btnTag").disabled=true;
+  var posSalva = 0;
+
+  function addRow(tableID,tempo) {
+      var table = document.getElementById(tableID);
+      var rowCount = table.rows.length;
+      var row = table.insertRow(rowCount);
+
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      //  cell2.innerHTML = rowCount;
+
+      var cell3 = row.insertCell(2);
+      cell3.innerHTML = tempo;
+      var tempo_h= document.createElement("input");
+      tempo_h.type = "hidden";
+      //  tempo_h.setAttribute("name","tempo-"+rowCount);
+      tempo_h.setAttribute("name","tempo");
+      tempo_h.setAttribute("id","tempo-"+rowCount);
+      tempo_h.setAttribute("value",tempo);
+      cell3.appendChild(tempo_h);
+
+      var cell4 = row.insertCell(3);
+      var element4 = document.createElement("input");
+      element4.type = "text";
+      //  element4.setAttribute("name","tag-"+rowCount);
+      element4.setAttribute("name","tag");
+      var element5 = document.createElement("input");
+      element5.type = "button";
+      element5.value = "SAVE";
+      element5.setAttribute("name","btn"+rowCount);
+      element5.setAttribute("id","btn"+rowCount);
+      element5.setAttribute("onclick","javascript:salva('"+ rowCount +"');");
+
+      if(posSalva>0){
+          document.getElementById("btn"+posSalva).style.display = "none";
+      }
+      posSalva = rowCount;
+      cell4.appendChild(element4);
+      cell4.appendChild(element5);
+  }
+  function salva(n) {
+      if(confirm("Salvare i cambiamenti?")){
+        // richiama uno script che salva le righe aggiunte nella tabella
+        document.getElementById("tabtags").submit();
+      } else return false;
+  }
+  function cancTag(id) {
+      if(confirm("Sicuro di voler cancellare questo segnalibro?")){
+        // richiama uno script che cancella il record dalla tabella
+        var cor = document.getElementById("id_cor").value;
+        var lez = document.getElementById("id_lez").value;
+        window.location="sviluppo.videolezioni.del_bookmarks?pid="+id+"&cor="+cor+"&lez="+lez;
+      }
+  }
+  function playForTag(){
+      var video1 = document.getElementsByTagName("video")[0];
+      if (video1.style.display=='none') {
+          // non HTML5
+          if ($f("aflowplayer").isPlaying()) $f("aflowplayer").pause();
+          $f("aflowplayer").seek(0);
+          $f("aflowplayer").play();
+      } else {
+          // HTML5
+          video1.pause();
+          video1.currentTime = 0;
+          video1.play();
+      }
+      document.getElementById("btnPlay").disabled=true;
+      document.getElementById("btnTag").disabled=false;
+  }
+  // mette lo 0 a min o sec se < 9
+  function adjustData()  {
+      if (arguments.length == 1) {
+          var w = arguments[0];
+          w = w > 9 ? w : "0" + w;
+          return { sec: w };
+      } else if (arguments.length == 2) {
+          var w = arguments[0];
+          var z = arguments[1];
+          w = w > 9 ? w : "0" + w;
+          z = z > 9 ? z : "0" + z;
+          return { min: z, sec: w };
+      }
+  }
+  var empty_data = "00:00:00 / ";
+  var data = "";
+  function tag(){
+      var video1 = document.getElementsByTagName("video")[0];
+      var t=0;
+      if (video1.style.display=='none') {
+          // non HTML5
+          t = $f("aflowplayer").getTime();
+      } else {
+          // HTML5
+          t = video1.currentTime;
+      }
+      t = Math.round(t);
+      if (t < 60) { // secondi
+          d_obj = adjustData(t);
+          tempo = "00:00:" + d_obj.sec;
+      } else if (t < 3600) { // minuti
+          var sec = t % 60;
+          var min = Math.floor(t / 60);
+          d_obj = adjustData(sec, min);
+          tempo = "00:" + d_obj.min + ":" + d_obj.sec;
+      } else  { // ore
+          var h = Math.floor(t / 3600);
+          var m_t = t % 3600;
+          var m = Math.floor(m_t / 60);
+          var s = m_t % 60;
+          d_obj = adjustData(s, m);
+          tempo = h + ":" + d_obj.min + ":" + d_obj.sec;
+      }
+      if($("#aggiunta").is(":hidden"))
+          $("#aggiunta").toggle('fast');
+      addRow('tabella',tempo);
+  }
+  </script>
+<table style="  width: 100%; border: 0;">
+<tr><td style="height: 1px; width: 100%; background-color: #cccccc;"></td></tr>
+<tr><td style="width: 100%; height: 1px;  font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal;  text-decoration: none; color: #575757; text-align: right;">
+      &copy;&nbsp;gestione didattica </td></tr>
+<tr><td style="width: 100%; height: 20px; text-align: right;"><a href="mailto:webmaster@studenti.polito.it" class="polimail">m@il</a></td></tr>
+</table>
+<script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-416861-14']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+</body>
+         </html>
